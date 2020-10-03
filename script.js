@@ -1,5 +1,17 @@
 function init()  
 {
+    i = 0;
+    var array = ['https://www.w3schools.com/howto/img_nature_wide.jpg', 'https://www.w3schools.com/howto/img_mountains_wide.jpg', 'https://www.w3schools.com/howto/img_snow_wide.jpg'];
+    $("gauche").addEventListener("click", function() {
+        i == 0 ? i = 2 : i--;
+        $("frontHeader").style.backgroundImage = "url(" + array[i] + ")";
+    });
+        
+
+    $("droite").addEventListener("click", function() {
+        i == 2 ? i = 0 : i++;
+        $("frontHeader").style.backgroundImage = "url(" + array[i] + ")";
+    });
 }
 (function() 
 {
